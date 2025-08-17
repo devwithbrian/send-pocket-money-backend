@@ -34,23 +34,23 @@ It exposes REST APIs for registering and logging in users, sending money, fetchi
    npm install
 3. Create a .env file in the project root:
    # Server
-   PORT=4000
+   `PORT=4000`
    
    # Database
-    MONGODB_URI=mongodb://localhost:27017/send_pocket_money
+    `MONGODB_URI=mongodb://localhost:27017/send_pocket_money`
     
    # Security
-   JWT_SECRET=your_jwt_secret_key_here
-   COOKIE_SECRET=your_cookie_secret_key_here
+   `JWT_SECRET=your_jwt_secret_key_here
+   COOKIE_SECRET=your_cookie_secret_key_here`
 
    ### Notes on the above
-   PORT: Port for the backend server (default 4000).
+   `PORT: Port for the backend server (default 4000).
 
    MONGODB_URI: Connection string for MongoDB.
 
    JWT_SECRET: Secret used to sign JWTs for authentication.
 
-   COOKIE_SECRET: Secret used to sign and secure cookies.
+   COOKIE_SECRET: Secret used to sign and secure cookies.`
 4. Start the server:
    ```bash
    npm run dev 
