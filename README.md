@@ -31,6 +31,7 @@ It exposes REST APIs for registering and logging in users, sending money, fetchi
    git clone https://github.com/devwithbrian/send-pocket-money-backend.git
    cd send-pocket-money-backend
 2. Install dependencies:
+   ```bash
    npm install
 3. Create a .env file in the project root:
    # Server
