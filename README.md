@@ -18,7 +18,7 @@ It exposes REST APIs for registering and logging in users, sending money, fetchi
 - Node.js
 - Express.js
 - MongoDB (via Mongoose)
-- JWT Authentication
+- JWT Authentication + CSRF Cookie
 - CORS + dotenv
 
 ---
