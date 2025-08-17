@@ -20,7 +20,6 @@ It exposes REST APIs for registering and logging in users, sending money, fetchi
 - MongoDB (via Mongoose)
 - JWT Authentication
 - CORS + dotenv
-- Optional: Axios (if using external FX APIs)
 
 ---
 
