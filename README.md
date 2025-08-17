@@ -1,7 +1,7 @@
 # 💸 Send Pocket Money – Backend (Node, Express and MongoDB)
 
 This is the **Node.js + Express backend** of the **Send Pocket Money** application.  
-It exposes REST APIs for sending money, fetching exchange rates, and managing transactions.
+It exposes REST APIs for registering and logging in users, sending money, fetching exchange rates, and managing transactions.
 
 ---
 
