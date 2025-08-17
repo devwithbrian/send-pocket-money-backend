@@ -58,6 +58,17 @@ It exposes REST APIs for registering and logging in users, sending money, fetchi
 The backend runs on http://localhost:4000.
 
 📂 API Endpoints
+
+🔹 Auth
+POST /register
+User registration
+
+POST /login
+User login
+
+POST /logout
+User logout
+
 🔹 Rates
 
 GET /api/rates
