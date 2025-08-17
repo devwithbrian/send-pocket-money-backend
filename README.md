@@ -60,6 +60,7 @@ The backend runs on http://localhost:4000.
 📂 API Endpoints
 
 🔹 CSRF Token
+
 GET /api/csrf
 
 Generates a random CSRF token, sets it in a cookie, and also returns it in the response body.
@@ -76,6 +77,7 @@ Example response:
 }
 
 🔹 Current User
+
 GET /api/me
 
 Returns the currently logged-in user’s basic info, if a valid access token is found in cookies.
@@ -102,6 +104,7 @@ Example response (not logged in):
 }
 
 🔹 Register
+
 POST `/api/register` 
 
 Registers a new user and logs them in immediately.
