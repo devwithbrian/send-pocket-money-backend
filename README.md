@@ -55,7 +55,7 @@ It exposes REST APIs for registering and logging in users, sending money, fetchi
    ```bash
    npm run dev 
 
-The backend runs on http://localhost:4000.
+The backend runs on `http://localhost:4000`.
 
 📂 API Endpoints
 
