@@ -59,6 +59,46 @@ The backend runs on http://localhost:4000.
 
 📂 API Endpoints
 
+🔹 CSRF Token
+GET /api/csrf
+Generates a random CSRF token, sets it in a cookie, and also returns it in the response body.
+
+The cookie is named csrf.
+
+Token expires after 2 hours.
+
+
+Example response:
+
+{
+  "token": "kf83j9x2b9m1ysr1e1x9"
+}
+
+🔹 Current User
+GET /api/me
+Returns the currently logged-in user’s basic info, if a valid access token is found in cookies.
+
+If no token or invalid token → returns { "user": null }.
+
+If valid → returns user’s _id, name, and email.
+
+
+Example response (logged in):
+
+{
+  "user": {
+    "_id": "64d1f9a2e5b3f0a123456789",
+    "name": "Brian",
+    "email": "brian@example.com"
+  }
+}
+
+Example response (not logged in):
+
+{
+  "user": null
+}
+
 🔹 Auth
 POST /register
 User registration
