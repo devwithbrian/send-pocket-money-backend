@@ -62,7 +62,7 @@ The backend runs on http://localhost:4000.
 
 🔹 CSRF Token
 
-GET /api/csrf
+GET /api/auth/csrf
 
 Generates a random CSRF token, sets it in a cookie, and also returns it in the response body.
 
@@ -79,7 +79,7 @@ Example response:
 
 🔹 Current User
 
-GET /api/me
+GET /api/auth/me
 
 Returns the currently logged-in user’s basic info, if a valid access token is found in cookies.
 
@@ -106,7 +106,7 @@ Example response (not logged in):
 
 🔹 Register
 
-POST `/api/register` 
+POST `/api/auth/register` 
 
 Registers a new user and logs them in immediately.
  
@@ -133,7 +133,7 @@ Example error response:
  
 🔹 Login 
 
-POST `/api/login` 
+POST `/api/auth/login` 
 
 Logs in an existing user.
  
@@ -158,7 +158,7 @@ Example error response:
 
 🔹 Logout
 
-POST`/api/logout` 
+POST`/api/auth/logout` 
 
 Logs the user out by clearing the authentication cookie.
  
