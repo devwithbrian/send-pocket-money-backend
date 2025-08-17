@@ -8,7 +8,7 @@ It exposes REST APIs for registering and logging in users, sending money, fetchi
 ## 🚀 Features
 - Manage transactions stored in MongoDB.
 - Calculate and apply transfer fees.
-- Provide live or mock exchange rates.
+- Provide live exchange rates from the FX rates API.
 - JWT-based authentication & cookie sessions.
 - API endpoints with validation & error handling.
 
