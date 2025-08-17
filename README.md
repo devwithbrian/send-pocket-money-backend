@@ -28,7 +28,7 @@ It exposes REST APIs for sending money, fetching exchange rates, and managing tr
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-org/send-pocket-money-backend.git
+   git clone https://github.com/devwithbrian/send-pocket-money-backend.git
    cd send-pocket-money-backend
 2. Install dependencies:
    npm install
