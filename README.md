@@ -52,6 +52,7 @@ It exposes REST APIs for registering and logging in users, sending money, fetchi
 
    COOKIE_SECRET: Secret used to sign and secure cookies.
 4. Start the server:
+
    npm run dev 
 
 The backend runs on http://localhost:4000.
