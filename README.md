@@ -121,7 +121,9 @@ Registers a new user and logs them in immediately.
 Example request:
 
  `{   "name": "Brian",   "email": "brian@example.com",   "password": "mypassword123" } ` 
-**Example response (201 Created):**
+
+Example response (201 Created):
+
  `{   "user": {     "_id": "64d1f9a2e5b3f0a123456789",     "name": "Brian",     "email": "brian@example.com"   } } ` 
 
 Example error response:
@@ -167,6 +169,7 @@ Logs the user out by clearing the authentication cookie.
 
  
 Example request headers:
+
  `X-CSRF-Token: abc123csrf ` 
 
 Example response:
@@ -179,6 +182,7 @@ Example error response:
 🔹 Rates
 
 GET /api/rates
+
 Returns exchange rates for GBP and ZAR.
 
 Example response:
@@ -190,7 +194,9 @@ Example response:
 🔹 Transactions
 
 POST /api/transactions
+
 Create a new transaction.
+
 Request:
 {
   "recipientName": "John Doe",
@@ -205,8 +211,11 @@ Request:
 }
 
 GET /api/transactions?page=1&pageSize=5
+
 Fetch paginated transaction history.
+
 Response:
+
 {
   "items": [
     {
@@ -226,5 +235,6 @@ Response:
 }
 
 🧪 Testing
+
 npm test
 
