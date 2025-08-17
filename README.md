@@ -44,13 +44,13 @@ It exposes REST APIs for registering and logging in users, sending money, fetchi
    COOKIE_SECRET=your_cookie_secret_key_here`
 
    ### Notes on the above
-   `PORT: Port for the backend server (default 4000).
+   `PORT: Port for the backend server (default 4000).`
 
-   MONGODB_URI: Connection string for MongoDB.
+   `MONGODB_URI: Connection string for MongoDB.`
 
-   JWT_SECRET: Secret used to sign JWTs for authentication.
+   `JWT_SECRET: Secret used to sign JWTs for authentication.`
 
-   COOKIE_SECRET: Secret used to sign and secure cookies.`
+   `COOKIE_SECRET: Secret used to sign and secure cookies.`
 4. Start the server:
    ```bash
    npm run dev 
