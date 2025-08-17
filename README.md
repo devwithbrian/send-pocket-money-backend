@@ -62,7 +62,7 @@ The backend runs on http://localhost:4000.
 
 🔹 CSRF Token
 
-GET /api/auth/csrf
+GET `/api/auth/csrf`
 
 Generates a random CSRF token, sets it in a cookie, and also returns it in the response body.
 
@@ -79,7 +79,7 @@ Example response:
 
 🔹 Current User
 
-GET /api/auth/me
+GET `/api/auth/me`
 
 Returns the currently logged-in user’s basic info, if a valid access token is found in cookies.
 
@@ -158,7 +158,7 @@ Example error response:
 
 🔹 Logout
 
-POST`/api/auth/logout` 
+POST `/api/auth/logout` 
 
 Logs the user out by clearing the authentication cookie.
  
@@ -182,7 +182,7 @@ Example error response:
 
 🔹 Rates
 
-GET /api/rates
+GET `/api/rates`
 
 Returns exchange rates for GBP and ZAR.
 
@@ -194,7 +194,7 @@ Example response:
 
 🔹 Transactions
 
-POST /api/transactions
+POST `/api/transactions`
 
 Create a new transaction.
 
