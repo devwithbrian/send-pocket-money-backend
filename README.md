@@ -61,6 +61,7 @@ The backend runs on http://localhost:4000.
 
 🔹 CSRF Token
 GET /api/csrf
+
 Generates a random CSRF token, sets it in a cookie, and also returns it in the response body.
 
 The cookie is named csrf.
@@ -76,6 +77,7 @@ Example response:
 
 🔹 Current User
 GET /api/me
+
 Returns the currently logged-in user’s basic info, if a valid access token is found in cookies.
 
 If no token or invalid token → returns { "user": null }.
@@ -101,6 +103,7 @@ Example response (not logged in):
 
 🔹 Register
 POST `/api/register` 
+
 Registers a new user and logs them in immediately.
  
  
@@ -123,7 +126,9 @@ Example error response:
  `{ "message": "Email already registered" } ` 
  
 🔹 Login 
+
 POST `/api/login` 
+
 Logs in an existing user.
  
  
@@ -144,10 +149,15 @@ Example request:
 Example error response:
 
  `{ "message": "Invalid credentials" } `  
-🔹 **Logout** **POST** `/api/logout` Logs the user out by clearing the authentication cookie.
+
+🔹 Logout
+
+POST`/api/logout` 
+
+Logs the user out by clearing the authentication cookie.
  
  
-- Requires a valid **CSRF token** (must be sent in the `X-CSRF-Token` header, and match the `csrf` cookie).
+- Requires a valid CSRF token (must be sent in the `X-CSRF-Token` header, and match the `csrf` cookie).
  
 - On success, returns a confirmation message.
  
