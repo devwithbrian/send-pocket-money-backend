@@ -99,15 +99,69 @@ Example response (not logged in):
   "user": null
 }
 
-🔹 Auth
-POST /register
-User registration
+🔹 Register
+POST `/api/register` 
+Registers a new user and logs them in immediately.
+ 
+ 
+- Requires `name`, `email`, and `password` in the request body.
+ 
+- Email must be valid, password must be at least 8 characters.
+ 
+- If registration is successful, sets an authentication cookie and returns the new user’s info.
+ 
 
-POST /login
-User login
+ 
+Example request:
 
-POST /logout
-User logout
+ `{   "name": "Brian",   "email": "brian@example.com",   "password": "mypassword123" } ` 
+**Example response (201 Created):**
+ `{   "user": {     "_id": "64d1f9a2e5b3f0a123456789",     "name": "Brian",     "email": "brian@example.com"   } } ` 
+
+Example error response:
+
+ `{ "message": "Email already registered" } ` 
+ 
+🔹 Login 
+POST `/api/login` 
+Logs in an existing user.
+ 
+ 
+- Requires `email` and `password` in the request body.
+ 
+- On success, sets an authentication cookie and returns the user’s info.
+ 
+- On failure (invalid credentials), returns an error.
+ 
+
+ 
+Example request:
+
+ `{   "email": "brian@example.com",   "password": "mypassword123" } ` 
+**Example response:**
+ `{   "user": {     "_id": "64d1f9a2e5b3f0a123456789",     "name": "Brian",     "email": "brian@example.com"   } } ` 
+
+Example error response:
+
+ `{ "message": "Invalid credentials" } `  
+🔹 **Logout** **POST** `/api/logout` Logs the user out by clearing the authentication cookie.
+ 
+ 
+- Requires a valid **CSRF token** (must be sent in the `X-CSRF-Token` header, and match the `csrf` cookie).
+ 
+- On success, returns a confirmation message.
+ 
+
+ 
+Example request headers:
+ `X-CSRF-Token: abc123csrf ` 
+
+Example response:
+
+ `{ "message": "Logged out successfully" } ` 
+
+Example error response:
+ `{ "message": "CSRF token invalid" } ` 
 
 🔹 Rates
 
