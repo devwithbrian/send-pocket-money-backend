@@ -72,9 +72,9 @@ Token expires after 2 hours.
 
 Example response:
 
-{
+`{
   "token": "kf83j9x2b9m1ysr1e1x9"
-}
+}`
 
 🔹 Current User
 
@@ -82,26 +82,26 @@ GET `/api/auth/me`
 
 Returns the currently logged-in user’s basic info, if a valid access token is found in cookies.
 
-If no token or invalid token → returns { "user": null }.
+If no token or invalid token → returns `{ "user": null }`.
 
-If valid → returns user’s _id, name, and email.
+If valid → returns `user’s _id, name, and email`.
 
 
 Example response (logged in):
 
-{
+`{
   "user": {
     "_id": "64d1f9a2e5b3f0a123456789",
     "name": "Brian",
     "email": "brian@example.com"
   }
-}
+}`
 
 Example response (not logged in):
 
-{
+`{
   "user": null
-}
+}`
 
 🔹 Register
 
@@ -120,15 +120,15 @@ Registers a new user and logs them in immediately.
  
 Example request:
 
- `{   "name": "Brian",   "email": "brian@example.com",   "password": "mypassword123" } ` 
+ `{   "name": "Brian",   "email": "brian@example.com",   "password": "mypassword123" }` 
 
 Example response (201 Created):
 
- `{   "user": {     "_id": "64d1f9a2e5b3f0a123456789",     "name": "Brian",     "email": "brian@example.com"   } } ` 
+ `{   "user": {     "_id": "64d1f9a2e5b3f0a123456789",     "name": "Brian",     "email": "brian@example.com"   }` 
 
 Example error response:
 
- `{ "message": "Email already registered" } ` 
+ `{ "message": "Email already registered" }` 
  
 🔹 Login 
 
@@ -147,13 +147,14 @@ Logs in an existing user.
  
 Example request:
 
- `{   "email": "brian@example.com",   "password": "mypassword123" } ` 
-**Example response:**
- `{   "user": {     "_id": "64d1f9a2e5b3f0a123456789",     "name": "Brian",     "email": "brian@example.com"   } } ` 
+ `{   "email": "brian@example.com",   "password": "mypassword123" }` 
+
+Example response:
+ `{   "user": {     "_id": "64d1f9a2e5b3f0a123456789",     "name": "Brian",     "email": "brian@example.com"   }` 
 
 Example error response:
 
- `{ "message": "Invalid credentials" } `  
+ `{ "message": "Invalid credentials" }`  
 
 🔹 Logout
 
@@ -174,10 +175,10 @@ Example request headers:
 
 Example response:
 
- `{ "message": "Logged out successfully" } ` 
+ `{ "message": "Logged out successfully" }` 
 
 Example error response:
- `{ "message": "CSRF token invalid" } ` 
+ `{ "message": "CSRF token invalid" }` 
 
 🔹 Rates
 
@@ -186,10 +187,11 @@ GET `/api/rates`
 Returns exchange rates for GBP and ZAR.
 
 Example response:
-{
+
+`{
   "GBP": 0.79,
   "ZAR": 18.25
-}
+}`
 
 🔹 Transactions
 
@@ -198,18 +200,20 @@ POST `/api/transactions`
 Create a new transaction.
 
 Request:
-{
+
+`{
   "recipientName": "John Doe",
   "note": "Happy Birthday",
   "currency": "GBP",
   "amountUSD_cents": 10000
-}
+}`
 
 Response: 
-{
+
+`{
   "status": "success",
   "id": "64a9c1234abcd"
-}
+}`
 
 GET /api/transactions?page=1&pageSize=5
 
@@ -217,7 +221,7 @@ Fetch paginated transaction history.
 
 Response:
 
-{
+`{
   "items": [
     {
       "_id": "64a9c1234abcd",
@@ -233,7 +237,7 @@ Response:
   ],
   "page": 1,
   "total": 25
-}
+}`
 
 🧪 Testing
 ```bash
